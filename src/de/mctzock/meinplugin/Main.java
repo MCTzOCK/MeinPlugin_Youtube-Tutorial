@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import de.mctzock.meinplugin.commands.CommandHeal;
 import de.mctzock.meinplugin.commands.CommandMeinBefehl;
+import de.mctzock.meinplugin.events.EventPlayerDisconnect;
 import de.mctzock.meinplugin.events.EventPlayerJoin;
 
 public class Main extends JavaPlugin{
@@ -14,6 +15,7 @@ public class Main extends JavaPlugin{
 		getCommand("mein-befehl").setExecutor(new CommandMeinBefehl());
 		getCommand("heal").setExecutor(new CommandHeal());
 		Bukkit.getPluginManager().registerEvents(new EventPlayerJoin(), this);
+		Bukkit.getPluginManager().registerEvents(new EventPlayerDisconnect(), this);
 		System.out.println("Das Plugin wurde erfolgreich geladen!");
 		super.onEnable();
 	}
