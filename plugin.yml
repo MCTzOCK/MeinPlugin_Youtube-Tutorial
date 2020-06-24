@@ -1,0 +1,10 @@
+name: MeinPlugin
+version: 1.0
+api-version: 1.13
+author: MCTzOCK
+main: de.mctzock.meinplugin.Main
+commands:
+  mein-befehl:
+    usage: /<command>
+  heal:
+    usage: /<command>
